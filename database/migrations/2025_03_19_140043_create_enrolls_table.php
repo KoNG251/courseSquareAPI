@@ -17,8 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('c_id');
             $table->date('cer_start');
             $table->date('cer_expire');
-            $table->foreign('m_id')->references('m_id')->on('members')->onDelete('cascade');
-            $table->foreign('c_id')->references('c_id')->on('courses')->onDelete('cascade');
+            $table->foreign('m_id')->references('m_id')->on('member')->onDelete('cascade');
+            $table->foreign('c_id')->references('c_id')->on('course')->onDelete('cascade');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('enrolls');
+        Schema::dropIfExists('enroll');
     }
 };
