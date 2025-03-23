@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('c_id');
             $table->string('c_name');
             $table->string('c_description');
-            $table->string('c_price');
+            $table->integer(column: 'c_price');
         });
     }
 

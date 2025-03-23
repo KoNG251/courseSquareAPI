@@ -81,7 +81,7 @@ class memberController extends Controller
 
     public function getSpecificMember(Request $request,$m_id)
     {
-        $member = Member::where('m_id', $m_id)->first();
+        $member = Member::find($m_id);
 
         if (!$member) {
             return response()->json([
@@ -98,7 +98,7 @@ class memberController extends Controller
 
     public function updateMember(Request $request,$m_id){
 
-        $member = Member::where('m_id', $m_id)->first();
+        $member = member::where('m_id', $m_id)->first();
 
         if(!$member){
             return response()->json([
@@ -113,7 +113,7 @@ class memberController extends Controller
                 'm_email' => [
                     'required',
                     'email',
-                    Rule::unique('members', 'm_email')->ignore($m_id, 'm_id')
+                    Rule::unique('member', 'm_email')->ignore($m_id, 'm_id')
             ],
                 'm_password' => ['required','min:8'],
                 'm_name' => ['required']
@@ -173,7 +173,7 @@ class memberController extends Controller
 
         return response()->json([
             'status' => true,
-            'message' => 'Deleted member with m_id: ' . $m_id,
+            'message' => 'Deleted member '.$member->m_name.' successfully.',
         ]);
     } catch (\Exception $e) {
         return response()->json([

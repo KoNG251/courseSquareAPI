@@ -8,6 +8,8 @@ class member extends Model
 {
 
     public $timestamps = false;
+    protected $table = 'member';
+    protected $primaryKey = 'm_id';
 
     protected $fillable = [
         'm_email',
