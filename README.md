@@ -23,7 +23,7 @@
 | GET | /courses | - | Get all courses |
 | POST | /courses | { <br>"c_name" : string, <br> "c_description" : string, <br> "c_price" : number <br>} | Create new course |
 | GET | /courses/{c_id} | - | Get specified course info |
-| PUT | /courses/{c_id} | { <br>"m_email" : string, <br> "m_password" : string, <br> "m_name" : string <br>} | Update specified course |
+| PUT | /courses/{c_id} | { <br>"c_name" : string, <br> "c_description" : string, <br> "c_price" : number <br>} | Update specified course |
 | Delete | /courses/{c_id} | - | delete specified course | 
 
 ### Enroll
