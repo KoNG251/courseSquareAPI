@@ -4,6 +4,7 @@
     <li>โคลน project</li>
     <li>พิมพ์คำสั่ง composer i </li>
     <li>พิมพ์คำสั่ง php artisan migrate เพื่อทำการ migrate database</li>
+    <li>พิมพ์คำสั่ง php artisan key:genrate เพื่อทำการ generate key</li>
     <li>พิมพ์คำสั่ง php artisan serve เพื่อทำการรันตัว server</li>
 </ol>
 
