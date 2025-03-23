@@ -85,7 +85,6 @@ class memberController extends Controller
 
         if (!$member) {
             return response()->json([
-                'status' => false,
                 'message' => '404 Not Found.',
             ], 404);
         }
@@ -102,7 +101,6 @@ class memberController extends Controller
 
         if(!$member){
             return response()->json([
-                'status' => false,
                 'message' => '404 Not Found.',
             ],404);
         }
@@ -163,7 +161,6 @@ class memberController extends Controller
 
     if (!$member) {
         return response()->json([
-            'status' => false,
             'message' => '404 Not Found.',
         ], 404);
     }

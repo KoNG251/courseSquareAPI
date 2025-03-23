@@ -96,7 +96,6 @@ class courseController extends Controller
 
             if(!$course){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
@@ -156,7 +155,6 @@ class courseController extends Controller
 
             if(!$course){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
@@ -183,7 +181,6 @@ class courseController extends Controller
 
             if(!$course){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }

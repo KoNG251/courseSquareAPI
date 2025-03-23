@@ -88,7 +88,6 @@ class enrollController extends Controller
 
             if(!$enroll){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
@@ -138,7 +137,6 @@ class enrollController extends Controller
 
             if(!$enroll){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
@@ -167,7 +165,6 @@ class enrollController extends Controller
 
             if(!$enroll){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
@@ -195,7 +192,6 @@ class enrollController extends Controller
 
             if($enrolls->isEmpty()){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
@@ -221,7 +217,6 @@ class enrollController extends Controller
 
             if($enrolls->isEmpty()){
                 return response()->json([
-                    'status' => true,
                     'message' => '404 Not Found.',
                 ],404);
             }
