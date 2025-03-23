@@ -64,6 +64,15 @@ class enrollController extends Controller
             ]);
         }
 
+        $findExist = enroll::where('m_id',$request->m_id)->where('c_id',$request->c_id)->first();
+
+        if($findExist){
+            return response()->json([
+                'status' => false,
+                'message' => 'This enroll already exists.',
+            ]);
+        }
+
         try{
 
             $enroll = enroll::create($request->all());
